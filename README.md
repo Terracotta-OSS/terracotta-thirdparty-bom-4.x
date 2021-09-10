@@ -24,7 +24,7 @@ No manual releasing is necessary, the tip of the branch will be tagged and relea
 
 # Downstream Project Usage
 
-Add the following block:
+1. Add the following block:
 
 ```xml
 <dependencyManagement>
@@ -43,7 +43,9 @@ Add the following block:
 </dependencyManagement>
 ```
 
-Remove `<version>` element from all third-party `<dependency>` blocks.
+2. Remove `<version>` element from all third-party `<dependency>` blocks
+3. Remove all third-party `<dependencyManagement>` definitions (all should be here instead)
+4. Add any that are missing to this pom
 
 # Caveat:
 
