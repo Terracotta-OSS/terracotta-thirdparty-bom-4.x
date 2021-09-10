@@ -93,20 +93,25 @@ All `<exclusion>` blocks should be done here when possible.
 ```
 This will fail because the bom-specified jetty-servlet definition is overriden completely 
 and is thus missing a `<version>`.  Specifying a version would defeat the purpose.
+If exclusions need to be specified in `<dependencyManagement>`, it must be done in the BOM
 
 ## This will work:
 
 **child project:**
 ```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.terracotta</groupId>
+            <artifactId>thirdparty-bom-4.x</artifactId>
+            <version>XXX</version>
+            <scope>import</scope>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+        
 <dependencies>
-    <dependency>
-        <groupId>org.terracotta</groupId>
-        <artifactId>thirdparty-bom-4.x</artifactId>
-        <version>XXX</version>
-        <scope>import</scope>
-        <type>pom</type>
-    </dependency>
-    
     <dependency>
         <groupId>org.eclipse.jetty</groupId>
         <artifactId>jetty-servlet</artifactId>
@@ -116,4 +121,4 @@ and is thus missing a `<version>`.  Specifying a version would defeat the purpos
     </dependency>
 </dependencies>
 ```
-Because `<dependencies>` section is cumulative, so `<version>` comes from the BOM
+Because `<dependencies>` section is cumulative, so `<version>` comes from the BOM. 
