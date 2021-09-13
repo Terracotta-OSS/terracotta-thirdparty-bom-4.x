@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-mavenBuild.legacy4x(merge_and_sync_snapshots: 'terracotta-os-snapshots')
+mavenBuild.legacy4x(merge_and_sync_repo: 'terracotta-os-snapshots')
