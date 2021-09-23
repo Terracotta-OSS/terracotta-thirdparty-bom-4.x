@@ -777,7 +777,7 @@
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-entitymanager</artifactId>
-                <version>3.6.3.Final</version>
+                <version>${hibernate-core.version}</version>
             </dependency>
             <dependency>
                 <groupId>jfree</groupId>
