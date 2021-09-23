@@ -45,7 +45,7 @@
         <hibernate-core.version>3.5.1-Final</hibernate-core.version>
         <derby.version>10.10.1.1</derby.version>
 
-        <apacheds-server.version>2.0.0.AM25</apacheds-server.version>
+        <apacheds.version>2.0.0.AM25</apacheds.version>
 
         <byteman.version>2.0.4</byteman.version>
 
@@ -170,6 +170,12 @@
                 <groupId>hsqldb</groupId>
                 <artifactId>hsqldb</artifactId>
                 <version>1.7.2.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.googlecode.json-simple</groupId>
+                <artifactId>json-simple</artifactId>
+                <version>1.1.1</version>
             </dependency>
 
             <!-- Glassfish substitutes -->
@@ -445,14 +451,19 @@
             <dependency>
                 <groupId>org.apache.directory.server</groupId>
                 <artifactId>apacheds-server-integ</artifactId>
-                <version>${apacheds-server.version}</version>
+                <version>${apacheds.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.directory.server</groupId>
                 <artifactId>apacheds-core-integ</artifactId>
-                <version>${apacheds-server.version}</version>
+                <version>${apacheds.version}</version>
                 <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-all</artifactId>
+                <version>${apacheds.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.directory.server</groupId>
@@ -505,6 +516,191 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!-- largely enterprise -->
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-i18n</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-jdbm-partition</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-mavibot-partition</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-xdbm-partition</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-core-shared</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-core-api</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-interceptors</artifactId>
+                <version>${apacheds.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-core</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-core-annotations</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-server-annotations</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-core-jndi</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-core-constants</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-core-avl</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-ldif-partition</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-protocol-shared</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-kerberos-codec</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-protocol-ntp</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-protocol-ldap</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-protocol-kerberos</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-protocol-dhcp</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-protocol-dns</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-server-config</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-service-builder</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-server-jndi</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-interceptor-kerberos</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-kerberos-test</artifactId>
+                <version>${apacheds.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-http-directory-bridge</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-http-integration</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-test-framework</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>ldap-client-test</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>kerberos-client</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-service</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-wrapper</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-installers-maven-plugin</artifactId>
+                <version>${apacheds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-installers</artifactId>
+                <version>${apacheds.version}</version>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.directory.server</groupId>
+                <artifactId>apacheds-osgi-integ</artifactId>
+                <version>${apacheds.version}</version>
             </dependency>
 
             <!-- from security-modules -->
