@@ -22,7 +22,7 @@
 
         <guava.version>30.1.1-jre</guava.version>
         <groovy.version>2.5.8</groovy.version>
-        <shiro.version>1.7.1</shiro.version>
+        <shiro.version>1.8.0</shiro.version>
 
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
