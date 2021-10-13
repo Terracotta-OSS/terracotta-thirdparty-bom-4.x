@@ -7,9 +7,15 @@ updates:
     schedule:
       interval: "daily"
     target-branch: "main"
+    labels:
+      - "main"
+      - "dependencies"
     
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
       interval: "daily"
     target-branch: "release/4.3.10"
+    labels:
+      - "4.3.10"
+      - "dependencies"
