@@ -11,7 +11,9 @@ updates:
       - "main"
       - "dependencies"
     open-pull-requests-limit: 0
-    
+  # NOTE ON LABELS: they have to be created manually first: 
+  # https://github.com/Terracotta-OSS/terracotta-thirdparty-bom-4.x/labels
+  # otherwise, depedabot will fail.
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
