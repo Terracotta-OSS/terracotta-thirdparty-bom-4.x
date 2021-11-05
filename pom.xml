@@ -757,7 +757,7 @@
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
-                <version>3.3.2.GA</version>
+                <version>5.2.18.Final</version>
             </dependency>
             <dependency>
                 <groupId>com.sun.xsom</groupId>
