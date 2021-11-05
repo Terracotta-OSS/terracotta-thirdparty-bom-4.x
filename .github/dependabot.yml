@@ -10,7 +10,7 @@ updates:
     labels:
       - "main"
       - "dependencies"
-    open-pull-requests-limit: 0
+    open-pull-requests-limit: 50
   # NOTE ON LABELS: they have to be created manually first: 
   # https://github.com/Terracotta-OSS/terracotta-thirdparty-bom-4.x/labels
   # otherwise, depedabot will fail.
@@ -22,4 +22,4 @@ updates:
     labels:
       - "4.3.10"
       - "dependencies"
-    open-pull-requests-limit: 0
+    open-pull-requests-limit: 50
