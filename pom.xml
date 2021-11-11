@@ -43,7 +43,7 @@
         <h2.version>1.3.154</h2.version>
         <sizeof-agent.version>1.0.1</sizeof-agent.version>
         <hibernate-core.version>3.5.1-Final</hibernate-core.version>
-        <derby.version>10.14.2.0</derby.version>
+        <derby.version>10.15.2.0</derby.version>
 
         <apacheds.version>2.0.0.AM25</apacheds.version>
 
