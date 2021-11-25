@@ -47,7 +47,7 @@
 
         <apacheds.version>2.0.0.AM25</apacheds.version>
 
-        <byteman.version>2.0.4</byteman.version>
+        <byteman.version>4.0.18</byteman.version>
 
         <rest-assured.version>4.1.2</rest-assured.version>
 
