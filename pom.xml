@@ -23,6 +23,7 @@
         <guava.version>30.1.1-jre</guava.version>
         <groovy.version>2.5.14</groovy.version>
         <shiro.version>1.8.0</shiro.version>
+        <csrfguard.version>4.1.1</csrfguard.version>
 
         <slf4j.version>1.7.25</slf4j.version>
         <logback.version>1.2.3</logback.version>
@@ -487,7 +488,12 @@
             <dependency>
                 <groupId>org.owasp</groupId>
                 <artifactId>csrfguard</artifactId>
-                <version>4.0.0</version>
+                <version>${csrfguard.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.owasp</groupId>
+                <artifactId>csrfguard-extension-session</artifactId>
+                <version>${csrfguard.version}</version>
             </dependency>
             <!--prometheus java client-->
             <dependency>
