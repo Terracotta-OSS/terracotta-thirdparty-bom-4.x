@@ -29,7 +29,7 @@
         <junit.version>4.13.1</junit.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <hamcrest.version>2.1</hamcrest.version>
-        <mockito-core.version>3.0.0</mockito-core.version>
+        <mockito-core.version>4.2.0</mockito-core.version>
         <commons-codec.version>1.13</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang.version>2.6</commons-lang.version>
