@@ -16,16 +16,17 @@
 
     <properties>
         <!-- keep jetty.version in sync with security-parent/management-apps -->
-        <jetty.version>9.4.44.v20210927</jetty.version>
-        <jackson.version>2.13.1</jackson.version>
+        <jetty.version>9.4.45.v20220203</jetty.version>
+        <jackson.version>2.13.2</jackson.version>
         <jersey.version>2.35</jersey.version>
 
         <guava.version>30.1.1-jre</guava.version>
-        <groovy.version>2.5.14</groovy.version>
+        <groovy.version>3.0.10</groovy.version>
         <shiro.version>1.8.0</shiro.version>
+        <csrfguard.version>4.1.3</csrfguard.version>
 
         <slf4j.version>1.7.35</slf4j.version>
-        <logback.version>1.2.10</logback.version>
+        <logback.version>1.2.11</logback.version>
         <junit.version>4.13.1</junit.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <hamcrest.version>2.1</hamcrest.version>
@@ -487,7 +488,12 @@
             <dependency>
                 <groupId>org.owasp</groupId>
                 <artifactId>csrfguard</artifactId>
-                <version>3.1.0</version>
+                <version>${csrfguard.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.owasp</groupId>
+                <artifactId>csrfguard-extension-session</artifactId>
+                <version>${csrfguard.version}</version>
             </dependency>
             <!--prometheus java client-->
             <dependency>
