@@ -18,7 +18,7 @@
         <!-- keep jetty.version in sync with security-parent/management-apps -->
         <jetty.version>9.4.45.v20220203</jetty.version>
         <jackson.version>2.13.2</jackson.version>
-        <jackson-databind.version>2.13.2.1</jackson-databind.version>
+        <jackson-databind.version>2.13.3</jackson-databind.version>
         <jersey.version>2.35</jersey.version>
 
         <guava.version>31.1-jre</guava.version>
