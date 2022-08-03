@@ -14,4 +14,7 @@
  * limitations under the License.
  */
 
-mavenBuild.legacy4x(merge_and_sync_repo: 'terracotta-os-snapshots')
+mavenBuild.legacy4x(
+ merge_and_sync_repo: 'terracotta-os-snapshots',
+ jdk: 11
+)
