@@ -42,7 +42,7 @@
         <commons-httpclient.version>3.1</commons-httpclient.version>
         <jaxb-runtime.version>2.3.6</jaxb-runtime.version>
         <jakarta.activation.version>1.2.2</jakarta.activation.version>
-        <h2.version>2.1.210</h2.version>
+        <h2.version>2.1.214</h2.version>
         <sizeof-agent.version>1.0.1</sizeof-agent.version>
         <hibernate-core.version>3.6.10.Final</hibernate-core.version>
         <derby.version>10.14.2.0</derby.version>
