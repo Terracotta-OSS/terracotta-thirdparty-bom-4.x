@@ -10,7 +10,7 @@
 
     <groupId>org.terracotta</groupId>
     <artifactId>thirdparty-bom-4.x</artifactId>
-    <version>4.3.10-SNAPSHOT</version>
+    <version>4.3.10.7.8</version>
     <packaging>pom</packaging>
 
 
