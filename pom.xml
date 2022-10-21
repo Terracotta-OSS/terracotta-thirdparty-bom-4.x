@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.terracotta.forge</groupId>
         <artifactId>forge-parent</artifactId>
-        <version>6.1</version>
+        <version>7.0</version>
     </parent>
 
     <groupId>org.terracotta</groupId>
@@ -17,12 +17,12 @@
     <properties>
         <!-- keep jetty.version in sync with security-parent/management-apps -->
         <jetty.version>10.0.11</jetty.version>
-        <jackson.version>2.13.3</jackson.version>
-        <jackson-databind.version>2.13.3</jackson-databind.version>
+        <jackson.version>2.13.4</jackson.version>
+        <jackson-databind.version>2.13.4.2</jackson-databind.version>
         <jersey.version>2.36</jersey.version>
 
         <guava.version>31.1-jre</guava.version>
-        <groovy.version>4.0.4</groovy.version>
+        <groovy.version>4.0.6</groovy.version>
         <shiro.version>1.10.0</shiro.version>
         <csrfguard.version>4.2.0</csrfguard.version>
 
@@ -49,11 +49,11 @@
 
         <apacheds.version>2.0.0.AM25</apacheds.version>
 
-        <byteman.version>2.0.4</byteman.version>
+        <byteman.version>4.0.20</byteman.version>
 
-        <rest-assured.version>5.1.1</rest-assured.version>
+        <rest-assured.version>5.2.0</rest-assured.version>
 
-        <powermock.version>2.0.2</powermock.version>
+        <powermock.version>2.0.9</powermock.version>
 
     </properties>
 
@@ -295,7 +295,7 @@
             <dependency>
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
-                <version>3.28.0-GA</version>
+                <version>3.29.2-GA</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
@@ -771,6 +771,11 @@
                 <version>${derby.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.apache.derby</groupId>
+                <artifactId>derbytools</artifactId>
+                <version>${derby.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>net.sf.hibernate</groupId>
                 <artifactId>hibernate</artifactId>
                 <version>2.1.8</version>
@@ -778,7 +783,7 @@
             <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-ehcache</artifactId>
-                <version>3.3.2.GA</version>
+                <version>${hibernate-core.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.sun.xsom</groupId>
@@ -908,7 +913,7 @@
             <dependency>
                 <groupId>org.ow2.asm</groupId>
                 <artifactId>asm</artifactId>
-                <version>7.2</version>
+                <version>9.4</version>
                 <scope>test</scope>
             </dependency>
 
@@ -926,6 +931,7 @@
             <plugin>
                 <groupId>org.sonatype.plugins</groupId>
                 <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.13</version>
             </plugin>
         </plugins>
     </build>
