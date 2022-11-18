@@ -26,7 +26,7 @@
         <shiro.version>1.10.0</shiro.version>
         <csrfguard.version>4.2.0</csrfguard.version>
 
-        <slf4j.version>1.7.36</slf4j.version>
+        <slf4j.version>2.0.4</slf4j.version>
         <logback.version>1.2.11</logback.version>
         <junit.version>4.13.2</junit.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
