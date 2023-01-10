@@ -45,7 +45,7 @@
         <h2.version>2.1.210</h2.version>
         <sizeof-agent.version>1.0.1</sizeof-agent.version>
         <hibernate-core.version>3.6.10.Final</hibernate-core.version>
-        <derby.version>10.14.2.0</derby.version>
+        <derby.version>10.16.1.1</derby.version>
         <apacheds.version>2.0.0.AM25</apacheds.version>
         <byteman.version>4.0.20</byteman.version>
         <rest-assured.version>5.3.0</rest-assured.version>
