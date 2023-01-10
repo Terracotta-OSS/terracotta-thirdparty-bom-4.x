@@ -16,22 +16,22 @@
 
     <properties>
         <!-- keep jetty.version in sync with security-parent/management-apps -->
-        <jetty.version>10.0.11</jetty.version>
-        <jackson.version>2.13.4</jackson.version>
-        <jackson-databind.version>2.13.4.2</jackson-databind.version>
-        <jersey.version>2.36</jersey.version>
+        <jetty.version>10.0.13</jetty.version>
+        <jackson.version>2.14.1</jackson.version>
+        <jackson-databind.version>2.14.1</jackson-databind.version>
+        <jersey.version>2.38</jersey.version>
 
         <guava.version>31.1-jre</guava.version>
-        <groovy.version>4.0.6</groovy.version>
-        <shiro.version>1.10.0</shiro.version>
+        <groovy.version>4.0.7</groovy.version>
+        <shiro.version>1.10.1</shiro.version>
         <csrfguard.version>4.2.0</csrfguard.version>
 
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.11</logback.version>
         <junit.version>4.13.2</junit.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
-        <hamcrest.version>2.1</hamcrest.version>
-        <mockito-core.version>3.0.0</mockito-core.version>
+        <hamcrest.version>2.2</hamcrest.version>
+        <mockito.version>4.11.0</mockito.version>
         <commons-codec.version>1.13</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang.version>2.6</commons-lang.version>
@@ -46,15 +46,10 @@
         <sizeof-agent.version>1.0.1</sizeof-agent.version>
         <hibernate-core.version>3.6.10.Final</hibernate-core.version>
         <derby.version>10.14.2.0</derby.version>
-
         <apacheds.version>2.0.0.AM25</apacheds.version>
-
         <byteman.version>4.0.20</byteman.version>
-
-        <rest-assured.version>5.2.0</rest-assured.version>
-
-        <powermock.version>2.0.9</powermock.version>
-
+        <rest-assured.version>5.3.0</rest-assured.version>
+        <bytebuddy.version>1.12.20</bytebuddy.version>
     </properties>
 
     <dependencyManagement>
@@ -233,7 +228,7 @@
             <dependency>
                 <groupId>com.thoughtworks.xstream</groupId>
                 <artifactId>xstream</artifactId>
-                <version>1.4.19</version>
+                <version>1.4.20</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.ant</groupId>
@@ -464,6 +459,16 @@
                 <version>${byteman.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>${bytebuddy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy-agent</artifactId>
+                <version>${bytebuddy.version}</version>
+            </dependency>
 
             <!-- management-apps -->
             <dependency>
@@ -513,7 +518,7 @@
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpclient</artifactId>
-                <version>4.5.13</version>
+                <version>4.5.14</version>
             </dependency>
             <dependency>
                 <groupId>com.jayway.jsonpath</groupId>
@@ -861,34 +866,15 @@
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
-                <artifactId>mockito-core</artifactId>
-                <version>${mockito-core.version}</version>
+                <artifactId>mockito-inline</artifactId>
+                <version>${mockito.version}</version>
                 <scope>test</scope>
             </dependency>
 
             <dependency>
-                <groupId>org.powermock</groupId>
-                <artifactId>powermock-module-junit4</artifactId>
-                <version>${powermock.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.powermock</groupId>
-                <artifactId>powermock-api-mockito2</artifactId>
-                <version>${powermock.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.powermock</groupId>
-                <artifactId>powermock-api-easymock</artifactId>
-                <version>${powermock.version}</version>
-                <scope>test</scope>
-            </dependency>
-
-            <dependency>
-                <groupId>org.easymock</groupId>
-                <artifactId>easymock</artifactId>
-                <version>4.0.2</version>
+                <groupId>org.objenesis</groupId>
+                <artifactId>objenesis</artifactId>
+                <version>3.3</version>
                 <scope>test</scope>
             </dependency>
 
