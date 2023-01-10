@@ -19,7 +19,7 @@
         <jetty.version>10.0.13</jetty.version>
         <jackson.version>2.14.1</jackson.version>
         <jackson-databind.version>2.14.1</jackson-databind.version>
-        <jersey.version>2.38</jersey.version>
+        <jersey.version>3.1.0</jersey.version>
 
         <guava.version>31.1-jre</guava.version>
         <groovy.version>4.0.7</groovy.version>
