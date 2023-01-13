@@ -23,7 +23,7 @@
 
         <guava.version>31.1-jre</guava.version>
         <groovy.version>4.0.7</groovy.version>
-        <shiro.version>1.10.1</shiro.version>
+        <shiro.version>1.11.0</shiro.version>
         <csrfguard.version>4.2.0</csrfguard.version>
 
         <slf4j.version>1.7.36</slf4j.version>
