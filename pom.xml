@@ -17,7 +17,7 @@
     <properties>
         <!-- keep jetty.version in sync with security-parent/management-apps -->
         <jetty.version>10.0.13</jetty.version>
-        <jackson.version>2.14.1</jackson.version>
+        <jackson.version>2.14.2</jackson.version>
         <jackson-databind.version>2.14.1</jackson-databind.version>
         <jersey.version>2.38</jersey.version>
 
