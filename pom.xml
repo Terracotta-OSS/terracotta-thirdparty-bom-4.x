@@ -13,18 +13,16 @@
     <version>4.4.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-
     <properties>
         <!-- keep jetty.version in sync with security-parent/management-apps -->
-        <jetty.version>10.0.13</jetty.version>
-        <jackson.version>2.14.1</jackson.version>
-        <jackson-databind.version>2.14.1</jackson-databind.version>
-        <jersey.version>2.38</jersey.version>
+        <jetty.version>10.0.15</jetty.version>
+        <jackson.version>2.15.1</jackson.version>
+        <jersey.version>2.39.1</jersey.version>
 
-        <guava.version>31.1-jre</guava.version>
-        <groovy.version>4.0.8</groovy.version>
+        <guava.version>32.0.0-jre</guava.version>
+        <groovy.version>4.0.12</groovy.version>
         <shiro.version>1.11.0</shiro.version>
-        <csrfguard.version>4.2.0</csrfguard.version>
+        <csrfguard.version>4.2.1</csrfguard.version>
 
         <slf4j.version>1.7.36</slf4j.version>
         <logback.version>1.2.11</logback.version>
@@ -32,7 +30,7 @@
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <hamcrest.version>2.2</hamcrest.version>
         <mockito.version>4.11.0</mockito.version>
-        <commons-codec.version>1.13</commons-codec.version>
+        <commons-codec.version>1.15</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-lang.version>2.6</commons-lang.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
@@ -40,16 +38,16 @@
         <commons-io.version>2.11.0</commons-io.version>
         <commons-logging.version>1.2</commons-logging.version>
         <commons-httpclient.version>3.1</commons-httpclient.version>
-        <jaxb-runtime.version>2.3.6</jaxb-runtime.version>
+        <jaxb-runtime.version>2.3.8</jaxb-runtime.version>
         <jakarta.activation.version>1.2.2</jakarta.activation.version>
         <h2.version>2.1.210</h2.version>
         <sizeof-agent.version>1.0.1</sizeof-agent.version>
         <hibernate-core.version>3.6.10.Final</hibernate-core.version>
         <derby.version>10.14.2.0</derby.version>
         <apacheds.version>2.0.0.AM25</apacheds.version>
-        <byteman.version>4.0.20</byteman.version>
+        <byteman.version>4.0.21</byteman.version>
         <rest-assured.version>5.3.0</rest-assured.version>
-        <bytebuddy.version>1.12.22</bytebuddy.version>
+        <bytebuddy.version>1.12.23</bytebuddy.version>
     </properties>
 
     <dependencyManagement>
@@ -226,6 +224,11 @@
                 <version>${groovy.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.apache.groovy</groupId>
+                <artifactId>groovy-ant</artifactId>
+                <version>${groovy.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.thoughtworks.xstream</groupId>
                 <artifactId>xstream</artifactId>
                 <version>1.4.20</version>
@@ -286,7 +289,6 @@
                 <version>${jersey.version}</version>
             </dependency>
 
-
             <dependency>
                 <groupId>org.javassist</groupId>
                 <artifactId>javassist</artifactId>
@@ -295,7 +297,12 @@
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
-                <version>${jackson-databind.version}</version>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.fasterxml.jackson.jaxrs</groupId>
@@ -321,7 +328,6 @@
                 <artifactId>jackson-core</artifactId>
                 <version>${jackson.version}</version>
             </dependency>
-
 
             <dependency>
                 <groupId>org.slf4j</groupId>
