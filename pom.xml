@@ -207,6 +207,18 @@
                 <version>1.1</version>
             </dependency>
 
+            <!-- Jakarta -->
+            <dependency>
+                <groupId>jakarta.transaction</groupId>
+                <artifactId>jakarta.transaction-api</artifactId>
+                <version>2.0.1</version>
+            </dependency>
+            <dependency>
+                <groupId>jakarta.servlet</groupId>
+                <artifactId>jakarta.servlet-api</artifactId>
+                <version>6.0.0</version>
+            </dependency>
+
             <!-- tests -->
             <dependency>
                 <groupId>org.apache.groovy</groupId>
@@ -901,6 +913,19 @@
                 <scope>test</scope>
             </dependency>
             <dependency>
+                <groupId>org.jboss.narayana.jta</groupId>
+                <artifactId>narayana-jta-jakarta</artifactId>
+                <version>5.13.1.Final</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.logging</groupId>
+                <artifactId>jboss-logging</artifactId>
+                <version>3.1.4.GA</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.dom4j</groupId>
                 <artifactId>dom4j</artifactId>
                 <version>2.1.4</version>
@@ -932,4 +957,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>terracotta-releases</id>
+            <url>https://repo.terracotta.org/maven2</url>
+        </repository>
+    </repositories>
 </project>
