@@ -16,16 +16,16 @@
     <properties>
         <!-- keep jetty.version in sync with security-parent/management-apps -->
         <jetty.version>10.0.15</jetty.version>
-        <jackson.version>2.15.1</jackson.version>
+        <jackson.version>2.15.2</jackson.version>
         <jersey.version>2.39.1</jersey.version>
 
-        <guava.version>32.0.0-jre</guava.version>
+        <guava.version>32.0.1-jre</guava.version>
         <groovy.version>4.0.12</groovy.version>
         <shiro.version>1.11.0</shiro.version>
-        <csrfguard.version>4.2.1</csrfguard.version>
+        <csrfguard.version>4.3.0</csrfguard.version>
 
         <slf4j.version>1.7.36</slf4j.version>
-        <logback.version>1.2.11</logback.version>
+        <logback.version>1.2.12</logback.version>
         <junit.version>4.13.2</junit.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <hamcrest.version>2.2</hamcrest.version>
@@ -35,7 +35,7 @@
         <commons-lang.version>2.6</commons-lang.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <commons-cli.version>1.5.0</commons-cli.version>
-        <commons-io.version>2.11.0</commons-io.version>
+        <commons-io.version>2.13.0</commons-io.version>
         <commons-logging.version>1.2</commons-logging.version>
         <commons-httpclient.version>3.1</commons-httpclient.version>
         <jaxb-runtime.version>2.3.8</jaxb-runtime.version>
@@ -46,8 +46,8 @@
         <derby.version>10.14.2.0</derby.version>
         <apacheds.version>2.0.0.AM25</apacheds.version>
         <byteman.version>4.0.21</byteman.version>
-        <rest-assured.version>5.3.0</rest-assured.version>
-        <bytebuddy.version>1.12.23</bytebuddy.version>
+        <rest-assured.version>5.3.1</rest-assured.version>
+        <bytebuddy.version>1.14.5</bytebuddy.version>
     </properties>
 
     <dependencyManagement>
