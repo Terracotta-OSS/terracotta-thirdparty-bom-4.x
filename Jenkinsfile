@@ -17,5 +17,5 @@
 
 mavenBuild.legacy4x(
  merge_and_sync_repo: 'terracotta-os-snapshots',
- jdk: 11
+ jdk: 17
 )
