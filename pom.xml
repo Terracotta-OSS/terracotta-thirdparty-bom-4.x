@@ -21,7 +21,7 @@ limitations under the License.
     <parent>
         <groupId>org.terracotta.forge</groupId>
         <artifactId>forge-parent</artifactId>
-        <version>7.0</version>
+        <version>8.1</version>
     </parent>
 
     <groupId>org.terracotta</groupId>
@@ -31,43 +31,48 @@ limitations under the License.
 
     <properties>
         <!-- keep jetty.version in sync with security-parent/management-apps -->
-        <jetty.version>10.0.20</jetty.version>
-        <jackson.version>2.16.1</jackson.version>
-        <jersey.version>2.41</jersey.version>
+        <jetty.version>12.0.16</jetty.version>
+        <jackson.version>2.18.2</jackson.version>
+        <jersey.version>3.1.10</jersey.version>
 
-        <guava.version>33.0.0-jre</guava.version>
-        <groovy.version>4.0.17</groovy.version>
+        <guava.version>33.4.0-jre</guava.version>
+        <groovy.version>4.0.24</groovy.version>
         <shiro.version>1.13.0</shiro.version>
-        <csrfguard.version>4.3.0</csrfguard.version>
-
-        <slf4j.version>1.7.36</slf4j.version>
-        <logback.version>1.2.13</logback.version>
+        <csrfguard.version>4.4.0-jakarta</csrfguard.version>
+        <slf4j.version>2.0.16</slf4j.version>
+        <logback.version>1.5.16</logback.version>
         <junit.version>4.13.2</junit.version>
-        <commons-beanutils.version>1.9.4</commons-beanutils.version>
-        <hamcrest.version>2.2</hamcrest.version>
-        <mockito.version>4.11.0</mockito.version>
-        <commons-codec.version>1.16.0</commons-codec.version>
-        <commons-collections.version>3.2.2</commons-collections.version>
-        <commons-lang.version>2.6</commons-lang.version>
-        <commons-lang3.version>3.14.0</commons-lang3.version>
-        <commons-cli.version>1.6.0</commons-cli.version>
-        <commons-io.version>2.15.1</commons-io.version>
-        <commons-logging.version>1.3.0</commons-logging.version>
-        <commons-httpclient.version>3.1</commons-httpclient.version>
-        <jaxb-runtime.version>2.3.9</jaxb-runtime.version>
-        <jakarta.activation.version>1.2.2</jakarta.activation.version>
+        <commons-beanutils.version>1.10.0</commons-beanutils.version>
+        <hamcrest.version>3.0</hamcrest.version>
+        <mockito.version>4.11.0</mockito.version> <!--no more update on this line -->
+        <commons-codec.version>1.17.2</commons-codec.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+        <commons-lang3.version>3.17.0</commons-lang3.version>
+        <commons-cli.version>1.9.0</commons-cli.version>
+        <commons-io.version>2.18.0</commons-io.version>
+        <commons-logging.version>1.3.4</commons-logging.version>
+        <commons-httpclient.version>3.1</commons-httpclient.version> <!--no more update on this line-->
+        <jaxb-runtime.version>4.0.5</jaxb-runtime.version>
+        <jakarta.activation.version>2.1.3</jakarta.activation.version>
         <h2.version>2.1.214</h2.version>
         <sizeof-agent.version>1.0.1</sizeof-agent.version>
         <hibernate-core.version>3.6.10.Final</hibernate-core.version>
         <derby.version>10.15.2.0</derby.version>
         <apacheds.version>2.0.0.AM25</apacheds.version>
-        <byteman.version>4.0.22</byteman.version>
-        <rest-assured.version>5.4.0</rest-assured.version>
-        <bytebuddy.version>1.14.11</bytebuddy.version>
+        <byteman.version>4.0.23</byteman.version>
+        <rest-assured.version>5.5.0</rest-assured.version>
+        <bytebuddy.version>1.15.10</bytebuddy.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-bom</artifactId>
+                <version>${shiro.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
             <dependency>
                 <groupId>org.apache.xmlbeans</groupId>
                 <artifactId>xmlbeans</artifactId>
@@ -90,26 +95,26 @@ limitations under the License.
                 <!-- we exclude all flagged jars so we can switch them for Glassfish -->
                 <exclusions>
                     <exclusion>
-                        <groupId>javax.servlet</groupId>
-                        <artifactId>javax.servlet-api</artifactId>
+                        <groupId>jakarta.servlet</groupId>
+                        <artifactId>jakarta.servlet-api</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-servlet</artifactId>
+                <groupId>org.eclipse.jetty.ee10</groupId>
+                <artifactId>jetty-ee10-servlet</artifactId>
                 <version>${jetty.version}</version>
                 <!-- exclusion is from ehcache2 -->
                 <exclusions>
                     <exclusion>
-                        <groupId>javax.servlet</groupId>
-                        <artifactId>javax.servlet-api</artifactId>
+                        <groupId>jakarta.servlet</groupId>
+                        <artifactId>jakarta.servlet-api</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>jetty-webapp</artifactId>
+                <groupId>org.eclipse.jetty.ee10</groupId>
+                <artifactId>jetty-ee10-webapp</artifactId>
                 <version>${jetty.version}</version>
             </dependency>
             <dependency>
@@ -128,6 +133,11 @@ limitations under the License.
                 <version>${jetty.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-jmx</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.eclipse.jetty.orbit</groupId>
                 <artifactId>javax.security.auth.message</artifactId>
                 <version>1.0.0.v201108011116</version>
@@ -137,7 +147,6 @@ limitations under the License.
                 <artifactId>javax.mail.glassfish</artifactId>
                 <version>1.4.1.v201005082020</version>
             </dependency>
-
 
             <dependency>
                 <groupId>jline</groupId>
@@ -196,12 +205,6 @@ limitations under the License.
 
             <!-- Glassfish substitutes -->
             <dependency>
-                <groupId>javax.servlet</groupId>
-                <artifactId>javax.servlet-api</artifactId>
-                <version>4.0.1</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
                 <groupId>gf-3122</groupId>
                 <artifactId>gf.javax.security.auth.message</artifactId>
                 <version>1.0</version>
@@ -232,7 +235,7 @@ limitations under the License.
             <dependency>
                 <groupId>jakarta.servlet</groupId>
                 <artifactId>jakarta.servlet-api</artifactId>
-                <version>6.0.0</version>
+                <version>6.1.0</version>
             </dependency>
 
             <!-- tests -->
@@ -265,12 +268,6 @@ limitations under the License.
                 <groupId>org.apache.ant</groupId>
                 <artifactId>ant</artifactId>
                 <version>1.10.13</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-web</artifactId>
-                <version>${shiro.version}</version>
             </dependency>
 
             <dependency>
@@ -333,8 +330,8 @@ limitations under the License.
                 <version>${jackson.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                <artifactId>jackson-jaxrs-json-provider</artifactId>
+                <groupId>com.fasterxml.jackson.jakarta.rs</groupId>
+                <artifactId>jackson-jakarta-rs-json-provider</artifactId>
                 <version>${jackson.version}</version>
                 <exclusions>
                     <!-- We get jakarta.activation-api from jaxb-runtime -->
@@ -395,14 +392,9 @@ limitations under the License.
             </dependency>
 
             <dependency>
-                <groupId>commons-collections</groupId>
-                <artifactId>commons-collections</artifactId>
-                <version>${commons-collections.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>commons-lang</groupId>
-                <artifactId>commons-lang</artifactId>
-                <version>${commons-lang.version}</version>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
             </dependency>
             <dependency>
                 <groupId>commons-cli</groupId>
@@ -448,8 +440,8 @@ limitations under the License.
             </dependency>
 
             <dependency>
-                <groupId>com.sun.activation</groupId>
-                <artifactId>jakarta.activation</artifactId>
+                <groupId>jakarta.activation</groupId>
+                <artifactId>jakarta.activation-api</artifactId>
                 <version>${jakarta.activation.version}</version>
             </dependency>
 
@@ -511,8 +503,8 @@ limitations under the License.
 
             <!-- management-apps -->
             <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>apache-jsp</artifactId>
+                <groupId>org.eclipse.jetty.ee10</groupId>
+                <artifactId>jetty-ee10-apache-jsp</artifactId>
                 <version>${jetty.version}</version>
             </dependency>
             <dependency>
@@ -570,30 +562,9 @@ limitations under the License.
                 <version>2.4.10</version>
             </dependency>
             <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-ehcache</artifactId>
-                <version>${shiro.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.jetty</groupId>
-                <artifactId>apache-jstl</artifactId>
+                <groupId>org.eclipse.jetty.ee10</groupId>
+                <artifactId>jetty-ee10-glassfish-jstl</artifactId>
                 <version>${jetty.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.servlet.jsp</groupId>
-                <artifactId>jakarta.servlet.jsp-api</artifactId>
-                <version>2.3.6</version>
-                <scope>provided</scope>
-            </dependency>
-            <dependency>
-                <groupId>jakarta.servlet.jsp.jstl</groupId>
-                <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
-                <version>1.2.7</version>
-            </dependency>
-            <dependency>
-                <groupId>org.glassfish.web</groupId>
-                <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-                <version>1.2.6</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -786,13 +757,6 @@ limitations under the License.
                 <version>${apacheds.version}</version>
             </dependency>
 
-            <!-- from security-modules -->
-            <dependency>
-                <groupId>org.eclipse.jetty.orbit</groupId>
-                <artifactId>javax.servlet</artifactId>
-                <version>3.0.0.v201112011016</version>
-            </dependency>
-
             <!-- from ehcache2 -->
             <dependency>
                 <groupId>net.sf.ehcache</groupId>
@@ -927,11 +891,6 @@ limitations under the License.
                 <scope>test</scope>
             </dependency>
 
-            <dependency>
-                <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-core</artifactId>
-                <version>${shiro.version}</version>
-            </dependency>
             <dependency>
                 <groupId>org.codehaus.btm</groupId>
                 <artifactId>btm</artifactId>
