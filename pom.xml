@@ -922,12 +922,10 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
+    <repositories>
+        <repository>
+            <id>terracotta-releases</id>
+            <url>https://repo.terracotta.org/maven2</url>
+        </repository>
+    </repositories>
 </project>
