@@ -21,7 +21,7 @@ limitations under the License.
     <parent>
         <groupId>org.terracotta.forge</groupId>
         <artifactId>forge-parent</artifactId>
-        <version>8.1</version>
+        <version>9.0</version>
     </parent>
 
     <groupId>org.terracotta</groupId>
@@ -30,6 +30,8 @@ limitations under the License.
     <packaging>pom</packaging>
 
     <properties>
+        <artifactory-build-name>thirdparty-bom</artifactory-build-name>
+
         <!-- keep jetty.version in sync with security-parent/management-apps -->
         <jetty.version>12.0.16</jetty.version>
         <jackson.version>2.18.2</jackson.version>
@@ -932,16 +934,6 @@ limitations under the License.
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.13</version>
-            </plugin>
-        </plugins>
-    </build>
 
     <repositories>
         <repository>
