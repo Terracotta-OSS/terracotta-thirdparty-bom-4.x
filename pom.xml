@@ -935,16 +935,6 @@ limitations under the License.
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.13</version>
-            </plugin>
-        </plugins>
-    </build>
-
     <repositories>
         <repository>
             <id>terracotta-releases</id>
