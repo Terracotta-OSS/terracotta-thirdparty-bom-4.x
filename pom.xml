@@ -17,39 +17,40 @@
         <artifactory-build-name>thirdparty-bom</artifactory-build-name>
 
         <!-- keep jetty.version in sync with security-parent/management-apps -->
-        <jetty.version>9.4.56.v20240826</jetty.version>
-        <jackson.version>2.16.1</jackson.version>
-        <jackson-databind.version>2.16.1</jackson-databind.version>
-        <jersey.version>2.41</jersey.version>
+        <jetty.version>9.4.57.v20241219</jetty.version>
+        <jackson.version>2.19.0</jackson.version>
+        <jackson-databind.version>2.19.0</jackson-databind.version>
+        <jersey.version>2.46</jersey.version> <!-- old -->
 
-        <guava.version>33.0.0-jre</guava.version>
-        <groovy.version>3.0.20</groovy.version>
-        <shiro.version>1.13.0</shiro.version>
-        <csrfguard.version>4.3.0</csrfguard.version>
+        <guava.version>33.4.8-jre</guava.version>
+        <groovy.version>3.0.24</groovy.version> <!-- old -->
+        <shiro.version>1.13.0</shiro.version> <!-- old -->
+        <csrfguard.version>4.4.0</csrfguard.version>
 
-        <slf4j.version>1.7.36</slf4j.version>
-        <logback.version>1.2.13</logback.version>
-        <junit.version>4.13.2</junit.version>
-        <commons-beanutils.version>1.9.4</commons-beanutils.version>
-        <hamcrest.version>2.2</hamcrest.version>
-        <mockito-core.version>3.12.4</mockito-core.version>
-        <commons-codec.version>1.16.0</commons-codec.version>
-        <commons-collections.version>3.2.2</commons-collections.version>
-        <commons-lang.version>2.6</commons-lang.version>
-        <commons-lang3.version>3.14.0</commons-lang3.version>
-        <commons-cli.version>1.6.0</commons-cli.version>
-        <commons-io.version>2.15.1</commons-io.version>
-        <commons-logging.version>1.3.0</commons-logging.version>
-        <commons-httpclient.version>3.1</commons-httpclient.version>
-        <jaxb-runtime.version>2.3.9</jaxb-runtime.version>
+        <slf4j.version>1.7.36</slf4j.version> <!-- old -->
+        <logback.version>1.2.13</logback.version> <!-- old -->
+        <junit.version>4.13.2</junit.version> <!-- old -->
+        <commons-beanutils.version>1.11.0</commons-beanutils.version> <!-- old -->
+        <hamcrest.version>3.0</hamcrest.version> <!-- old -->
+        <mockito-core.version>3.12.4</mockito-core.version> <!-- old -->
+        <commons-codec.version>1.18.0</commons-codec.version>
+        <commons-collections.version>3.2.2</commons-collections.version> <!-- old -->
+        <commons-lang.version>2.6</commons-lang.version> <!-- old -->
+        <commons-lang3.version>3.17.0</commons-lang3.version>
+        <commons-cli.version>1.9.0</commons-cli.version>
+        <commons-io.version>2.19.0</commons-io.version>
+        <commons-logging.version>1.3.5</commons-logging.version>
+        <commons-httpclient.version>3.1</commons-httpclient.version> <!-- old -->
+        <jaxb-runtime.version>2.3.9</jaxb-runtime.version> <!-- old -->
         <h2.version>2.1.214</h2.version>
         <sizeof-agent.version>1.0.1</sizeof-agent.version>
         <hibernate-core.version>3.6.10.Final</hibernate-core.version>
         <derby.version>10.14.2.0</derby.version>
+
         <apacheds.version>2.0.0.AM25</apacheds.version>
-        <byteman.version>4.0.22</byteman.version>
-        <rest-assured.version>5.4.0</rest-assured.version>
-        <powermock.version>2.0.9</powermock.version>
+        <byteman.version>4.0.25</byteman.version>
+        <rest-assured.version>5.5.5</rest-assured.version>
+        <powermock.version>2.0.9</powermock.version> <!-- outdated, removed from other newer branches -->
     </properties>
 
     <dependencyManagement>
