@@ -33,7 +33,7 @@ limitations under the License.
         <artifactory-build-name>thirdparty-bom</artifactory-build-name>
 
         <!-- keep jetty.version in sync with security-parent/management-apps -->
-        <jetty.version>12.1.6</jetty.version>
+        <jetty.version>12.0.32</jetty.version>
         <jackson.version>2.21.1</jackson.version>
         <jackson-annotations.version>2.21</jackson-annotations.version>
         <jersey.version>3.1.11</jersey.version>
@@ -41,7 +41,7 @@ limitations under the License.
         <guava.version>33.5.0-jre</guava.version>
         <groovy.version>4.0.30</groovy.version>
         <shiro.version>2.1.0</shiro.version>
-        <csrfguard.version>4.5.0-jakarta</csrfguard.version>
+        <csrfguard.version>4.4.0-jakarta</csrfguard.version>
         <slf4j.version>2.0.17</slf4j.version>
         <logback.version>1.5.26</logback.version>
         <junit.version>4.13.2</junit.version>
