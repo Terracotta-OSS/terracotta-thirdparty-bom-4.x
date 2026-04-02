@@ -28,7 +28,7 @@
         <csrfguard.version>4.4.0</csrfguard.version>
 
         <slf4j.version>1.7.36</slf4j.version> <!-- old -->
-        <logback.version>1.2.13</logback.version> <!-- old -->
+        <logback.version>1.5.32</logback.version> <!-- old -->
         <junit.version>4.13.2</junit.version> <!-- old -->
         <commons-beanutils.version>1.11.0</commons-beanutils.version> <!-- old -->
         <hamcrest.version>3.0</hamcrest.version> <!-- old -->
