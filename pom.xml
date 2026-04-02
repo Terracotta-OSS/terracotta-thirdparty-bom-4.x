@@ -48,7 +48,7 @@
 
         <apacheds.version>2.0.0.AM25</apacheds.version>
         <byteman.version>4.0.25</byteman.version>
-        <rest-assured.version>5.5.5</rest-assured.version>
+        <rest-assured.version>6.0.0</rest-assured.version>
         <powermock.version>2.0.9</powermock.version> <!-- outdated, removed from other newer branches -->
     </properties>
 
