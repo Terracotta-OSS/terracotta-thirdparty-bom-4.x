@@ -33,7 +33,7 @@
         <commons-beanutils.version>1.11.0</commons-beanutils.version> <!-- old -->
         <hamcrest.version>3.0</hamcrest.version> <!-- old -->
         <mockito.version>3.12.4</mockito.version> <!-- old -->
-        <commons-codec.version>1.18.0</commons-codec.version>
+        <commons-codec.version>1.21.0</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version> <!-- old -->
         <commons-lang3.version>3.18.0</commons-lang3.version>
         <commons-cli.version>1.9.0</commons-cli.version>
