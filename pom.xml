@@ -34,7 +34,7 @@ limitations under the License.
 
         <!-- keep jetty.version in sync with security-parent/management-apps -->
         <jetty.version>12.0.32</jetty.version>
-        <jackson.version>2.21.1</jackson.version>
+        <jackson.version>2.21.2</jackson.version>
         <jackson-annotations.version>2.21</jackson-annotations.version>
         <jersey.version>3.1.11</jersey.version>
 
