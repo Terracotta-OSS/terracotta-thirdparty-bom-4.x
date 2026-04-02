@@ -23,7 +23,7 @@
         <jersey.version>2.47</jersey.version> <!-- old -->
 
         <guava.version>33.4.8-jre</guava.version>
-        <groovy.version>3.0.24</groovy.version> <!-- old -->
+        <groovy.version>3.0.25</groovy.version> <!-- old -->
         <shiro.version>1.13.0</shiro.version> <!-- old -->
         <csrfguard.version>4.4.0</csrfguard.version>
 
