@@ -48,7 +48,7 @@ limitations under the License.
         <commons-beanutils.version>1.11.0</commons-beanutils.version>
         <hamcrest.version>3.0</hamcrest.version>
         <mockito.version>4.11.0</mockito.version> <!--no more update on this line -->
-        <commons-codec.version>1.21.0</commons-codec.version>
+        <commons-codec.version>1.22.0</commons-codec.version>
         <commons-collections4.version>4.5.0</commons-collections4.version>
         <commons-lang3.version>3.20.0</commons-lang3.version>
         <commons-cli.version>1.11.0</commons-cli.version>
