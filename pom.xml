@@ -39,7 +39,7 @@ limitations under the License.
         <jersey.version>3.1.11</jersey.version>
 
         <guava.version>33.5.0-jre</guava.version>
-        <groovy.version>4.0.30</groovy.version>
+        <groovy.version>5.0.6</groovy.version>
         <shiro.version>2.1.0</shiro.version>
         <csrfguard.version>4.4.0-jakarta</csrfguard.version>
         <slf4j.version>2.0.17</slf4j.version>
