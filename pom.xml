@@ -25,7 +25,7 @@
         <guava.version>33.4.8-jre</guava.version>
         <groovy.version>3.0.24</groovy.version> <!-- old -->
         <shiro.version>1.13.0</shiro.version> <!-- old -->
-        <csrfguard.version>4.4.0</csrfguard.version>
+        <csrfguard.version>4.5.0</csrfguard.version>
 
         <slf4j.version>1.7.36</slf4j.version> <!-- old -->
         <logback.version>1.2.13</logback.version> <!-- old -->
