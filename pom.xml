@@ -895,7 +895,7 @@ limitations under the License.
             <dependency>
                 <groupId>org.objenesis</groupId>
                 <artifactId>objenesis</artifactId>
-                <version>3.3</version>
+                <version>3.5</version>
                 <scope>test</scope>
             </dependency>
 
