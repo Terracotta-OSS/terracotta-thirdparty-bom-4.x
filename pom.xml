@@ -38,7 +38,7 @@ limitations under the License.
         <jackson-annotations.version>2.21</jackson-annotations.version>
         <jersey.version>3.1.11</jersey.version>
 
-        <guava.version>33.5.0-jre</guava.version>
+        <guava.version>33.6.0-jre</guava.version>
         <groovy.version>4.0.30</groovy.version>
         <shiro.version>2.2.1</shiro.version>
         <csrfguard.version>4.4.0-jakarta</csrfguard.version>
