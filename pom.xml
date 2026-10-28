@@ -61,7 +61,7 @@ limitations under the License.
         <sizeof-agent.version>1.0.1</sizeof-agent.version>
         <hibernate-core.version>3.6.10.Final</hibernate-core.version>
         <derby.version>10.15.2.0</derby.version>
-        <apacheds.version>2.0.0.AM27</apacheds.version>
+        <apacheds.version>2.0.0.AM26</apacheds.version>
         <byteman.version>4.0.28</byteman.version>
         <rest-assured.version>5.5.7</rest-assured.version>
         <bytebuddy.version>1.18.16</bytebuddy.version>
