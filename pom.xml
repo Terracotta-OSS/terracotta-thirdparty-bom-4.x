@@ -34,7 +34,7 @@ limitations under the License.
 
         <!-- keep jetty.version in sync with security-parent/management-apps -->
         <jetty.version>12.0.40</jetty.version>
-        <jackson.version>2.21.7</jackson.version>
+        <jackson.version>2.21.8</jackson.version>
         <jackson-annotations.version>2.21</jackson-annotations.version>
         <jersey.version>3.1.11</jersey.version>
 
@@ -43,7 +43,7 @@ limitations under the License.
         <shiro.version>2.2.1</shiro.version>
         <csrfguard.version>4.4.0-jakarta</csrfguard.version>
         <slf4j.version>2.0.20</slf4j.version>
-        <logback.version>1.6.5</logback.version>
+        <logback.version>1.6.6</logback.version>
         <junit.version>4.13.2</junit.version>
         <commons-beanutils.version>1.11.0</commons-beanutils.version>
         <hamcrest.version>3.0</hamcrest.version>
@@ -567,7 +567,7 @@ limitations under the License.
             <dependency>
                 <groupId>net.minidev</groupId>
                 <artifactId>json-smart</artifactId>
-                <version>2.4.10</version>
+                <version>2.4.11</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.jetty.ee10</groupId>
