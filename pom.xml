@@ -40,7 +40,7 @@ limitations under the License.
 
         <guava.version>33.7.2-jre</guava.version>
         <groovy.version>4.0.30</groovy.version>
-        <shiro.version>2.2.1</shiro.version>
+        <shiro.version>3.0.1</shiro.version>
         <csrfguard.version>4.4.0-jakarta</csrfguard.version>
         <slf4j.version>2.0.20</slf4j.version>
         <logback.version>1.6.6</logback.version>
@@ -71,10 +71,13 @@ limitations under the License.
         <dependencies>
             <dependency>
                 <groupId>org.apache.shiro</groupId>
-                <artifactId>shiro-bom</artifactId>
+                <artifactId>shiro-core</artifactId>
                 <version>${shiro.version}</version>
-                <scope>import</scope>
-                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-web</artifactId>
+                <version>${shiro.version}</version>
             </dependency>
             <dependency> <!-- TAB-10003: CVE-2026-0636 -->
                 <groupId>org.bouncycastle</groupId>
